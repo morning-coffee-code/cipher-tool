@@ -1,16 +1,14 @@
 """
 Caesar Cipher
 -------------
-
 """
 
 import string
-
 ALPHABET = string.ascii_uppercase
 
 
 def encrypt(text: str, shift: int) -> str:
-    """Encrypt text using a Caesar shift cipher."""
+    """Encrypt text using a Caesarcipher."""
     result = []
     shift = shift % 26
     for char in text.upper():
@@ -19,8 +17,7 @@ def encrypt(text: str, shift: int) -> str:
             result.append(ALPHABET[new_index])
         else:
             result.append(char)
-    return "".join(result)
-
+    return " ".join(result)
 
 def decrypt(text: str, shift: int) -> str:
     """Decrypt text that was encrypted with the given Caesar shift."""
